@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Monitoring Limbah SPPG by Fadlan</title>
+    <style>
+        /* Reset CSS Total - Biar Full Screen Tanpa Celah */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Mencegah scroll pada body utama */
+            background-color: #ffffff;
+        }
+
+        /* Container Iframe */
+        .iframe-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Iframe Style */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Loading Screen Sederhana */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 0; /* Di belakang iframe */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader">Memuat Aplikasi...</div>
+
+    <div class="iframe-container">
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycbxKdPpDiF8nhq1WIXUvn_Twmb8Q7YT2J2avnA1Bg9i3fbjF8rc0pU6QHqWTtmz0XXpKfg/exec" 
+            allow="geolocation *; microphone *; camera *; clipboard-write *" 
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+            title="App Frame">
+        </iframe>
+    </div>
+
+    
+</body>
+</html>
